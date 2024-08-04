@@ -1,28 +1,26 @@
-import React from "react";
-import { useState } from "react";
-import TransactionItem from "./TransactionItem";
+import React from 'react';
+import Transaction from './Transactions';
 
-const TransactionList = () => {
-    const [transactions, setTransactions] = useState([]);
-
-    // fetch from local server
-    const getTransactions = () => {
-         fetch("http://localhost:3001/transactions")
-         .then(res => res.json())
-         .then(data => setTransactions(data))
-         .catch("Error","Error retrieviing transaction List")
-    }    
-    getTransactions()    
- 
-
-    return (
-        <div>
-            <h2>List of Transactions</h2>
-            {transactions.map((transaction) => (
-            <TransactionItem key = {transaction.id} date = {transaction.date} description={transaction.description} amount = {transaction.amount} />
-     )) }
-        </div>
-    )
+function TransactionList({ transactions }) {
+  return (
+    <div className="transaction-list">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {transactions.map(transaction => (
+            <Transaction key={transaction.id} transaction={transaction} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 export default TransactionList;
