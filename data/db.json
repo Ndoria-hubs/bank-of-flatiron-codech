@@ -20,6 +20,13 @@
       "description": "moneyy",
       "category": "business",
       "amount": 500
+    },
+    {
+      "id": "0787",
+      "date": "2024-08-21",
+      "description": "yjhgjk",
+      "category": "jioj",
+      "amount": 4500
     }
   ]
 }

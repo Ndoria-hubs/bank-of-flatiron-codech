@@ -9,10 +9,12 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Fetch transactions when the component is created
+  function fetchTransactions() {
   fetch('http://localhost:3000/transactions')
     .then(response => response.json())
     .then(data => setTransactions(data))
     .catch(error => console.error('Error fetching transactions:', error));
+  }
 
   const addTransaction = (newTransaction) => {
     fetch('http://localhost:3000/transactions', {
@@ -30,13 +32,14 @@ function App() {
   };
 
   const filteredTransactions = transactions.filter(transaction =>
-    transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
+    transaction.description.toLowerCase().includes(searchTerm.toLowerCase()) 
   );
 
   return (
     <div className="App">
       <h1>Bank of Flatiron</h1>
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <button onClick={fetchTransactions}>Search Transactions</button>
       <TransactionForm addTransaction={addTransaction} />
       <TransactionList transactions={filteredTransactions} />
     </div>
