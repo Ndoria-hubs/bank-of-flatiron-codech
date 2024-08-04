@@ -1,52 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import GetTransactions from "./GetTransactions";
+import TransactionList from "./TransactionList";
 
 
 // search bar
-// const SearchTrans = () => {
-//     return (
-//      <input type="text" placeholder="Search..."/>,
-//      <button> Search Transaction </button>
-//     )
-// }
+const SearchTrans = () => {
+    return (
+     <input type="text" placeholder="Search..."/>,
+     <button> Search Transaction </button>
+    )
+}
 
 
-// add new task button
-// const AddNewTaskButton = (e) => {
-
-
-//     return (
-//      <button className = "addTransButton" onClick={POST}>Add New Transaction</button>
-//     )
-// }
+// // add new task button
+// const AddNewTaskButton = (e) => {}
 
 
 
 // list of transactions
 
-    const TransObject = ({ transactionList}) => {
+    const TransObject = () => {
         return (
-            <ul>
-                {transactionList.map((transaction) => (
-                    <li key={transaction.id}>
-                        <p>Date : {transaction.date}</p>
-                        <p>Description : {transaction.description}</p>
-                        <p>Amount : {transaction.amount}</p>
-                    </li>
-                ))}
-            </ul>
+            <TransactionList />
         )
     }
 
-   const HandleTransList = () => {
-    return (
-        <div>
-            <h2>Transaction List</h2>
-            <TransObject transactionList= {transactionList}/>
-        </div>
-    )
-} 
-
-
-export default HandleTransList;
+export { TransObject }
