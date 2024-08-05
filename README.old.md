@@ -2,6 +2,10 @@
 
 Welcome to the Bank of Flatiron, where you can trust us with all your financial data!
 
+Project Deployment Link: 'https://bank-of-flatiron-codech.verhttps://bank-of-flatiron-codech.vercel.app/cel.app/'
+
+JSON server deployment Link : 'https://fake-server-render.onrender.com/transactions'
+
 
 ## Instructions
 
