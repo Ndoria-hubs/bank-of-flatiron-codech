@@ -16,7 +16,7 @@ function TransactionForm({ addTransaction }) {
     e.preventDefault();
     addTransaction({
       ...formData,
-      amount: parseFloat(formData.amount),
+      amount: parseFloat(formData.amount), // to ensure amount is a rounded integer
     });
     setFormData({ date: '', description: '', category: '', amount: '' });
   };

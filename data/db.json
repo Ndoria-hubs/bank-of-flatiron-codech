@@ -17,16 +17,23 @@
     {
       "id": "5d01",
       "date": "2024-08-21",
-      "description": "moneyy",
+      "description": "Money",
       "category": "business",
       "amount": 500
     },
     {
       "id": "0787",
       "date": "2024-08-21",
-      "description": "yjhgjk",
-      "category": "jioj",
+      "description": "CLient",
+      "category": "Allowance",
       "amount": 4500
+    },
+    {
+      "id": "2bec",
+      "date": "2024-08-14",
+      "description": "Visit to the zoo",
+      "category": "Leisure trips",
+      "amount": 4000
     }
   ]
 }

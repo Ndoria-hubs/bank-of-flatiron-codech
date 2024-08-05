@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Transaction({ transaction }) {
+function TransactionsItem({ transaction }) {
   return (
     <tr>
       <td>{transaction.date}</td>
@@ -11,4 +11,4 @@ function Transaction({ transaction }) {
   );
 }
 
-export default Transaction;
+export default TransactionsItem;

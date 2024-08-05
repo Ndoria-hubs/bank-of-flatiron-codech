@@ -1,5 +1,5 @@
 import React from 'react';
-import Transaction from './TransactionsItem';
+import TransactionsItem from './TransactionsItem';
 
 function TransactionList({ transactions }) {
   return (
@@ -15,7 +15,7 @@ function TransactionList({ transactions }) {
         </thead>
         <tbody>
           {transactions.map(transaction => (
-            <Transaction key={transaction.id} transaction={transaction} />
+            <TransactionsItem key={transaction.id} transaction={transaction} />
           ))}
         </tbody>
       </table>
